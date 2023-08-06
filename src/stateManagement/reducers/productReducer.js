@@ -13,16 +13,28 @@ const initialState = {
 function productReducer(state = initialState, action) {
     switch (action.type) {
         case productGetAll:
-            return { ...state, items: state.items };
+            return {
+                ...state,
+                items: state.items,
+            };
 
         case productGetById:
-            return { ...state, items: state.items.find(q => q.id === action.payload) };
+            return {
+                ...state,
+                items: state.items.find((q) => q.id === action.payload),
+            };
 
         case productAdd:
-            return { ...state, items: state.items.concat([action.payload]) };
+            return {
+                ...state,
+                items: state.items.concat([action.payload]),
+            };
 
         case productRemove:
-            return { ...state, items: state.items.filter(q => q.id !== action.payload) };
+            return {
+                ...state,
+                items: state.items.filter((q) => q.id !== action.payload),
+            };
 
         default:
             return state;
