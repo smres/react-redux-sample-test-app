@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import productReducer from "./productReducer";
 
-combineReducers({productState: productReducer})
+let productState = combineReducers({ productStateInitial: productReducer });
 
-export default combineReducers;
+
+export default productState;

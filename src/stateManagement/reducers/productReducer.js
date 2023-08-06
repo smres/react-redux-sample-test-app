@@ -1,4 +1,4 @@
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { productGetAll, productGetById, productAdd, productRemove } from "../actions/actionTypes"
 
 const initialState = {
@@ -7,7 +7,7 @@ const initialState = {
         { id: 2, productName: "Product B", price: 200 },
         { id: 3, productName: "Product C", price: 300 },
     ],
-    isLoading: true
+    isLoading: false
 }
 
 function productReducer(state = initialState, action) {
@@ -29,8 +29,4 @@ function productReducer(state = initialState, action) {
     }
 }
 
-const mapStateToProps = state => ({
-    products: state.productState.items
-})
-
-export default connect(mapStateToProps)(productReducer);
+export default productReducer;
