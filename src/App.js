@@ -8,7 +8,6 @@ import Test1 from './components/Test1';
 
 function App() {
   return (
-<<<<<<< HEAD
     <div className="container-fluid">
       {/* <ProductList /> */}
       <h1>First Redux Sample App</h1>
@@ -20,10 +19,6 @@ function App() {
         </div>
       </div>
       <hr />
-=======
-    <div className="App">
-      <ProductList />
->>>>>>> f74bbd4e93466587942a9d4a8c7095410022504d
     </div>
   );
 }
